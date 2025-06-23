@@ -3,14 +3,91 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>VT Token - Buy</title>
+  <title>VT Token - Official Sale</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom, #f5e7a1, #fff8dc);
+      color: #333;
+    }
+    header {
+      background-color: #1e1e1e;
+      color: #fff;
+      padding: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header img {
+      height: 40px;
+    }
+    .container {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 1rem;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    h1 {
+      color: #a88600;
+    }
+    .section {
+      margin: 1.5rem 0;
+    }
+    .qrcode {
+      text-align: center;
+    }
+    .qrcode img {
+      width: 200px;
+      margin-top: 1rem;
+    }
+    .contact {
+      margin-top: 2rem;
+      text-align: center;
+    }
+    .contact a {
+      background: #00b900;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      text-decoration: none;
+      border-radius: 8px;
+      display: inline-block;
+    }
+  </style>
 </head>
-<body style="font-family:sans-serif; text-align:center; background:#fffbe6; padding:20px;">
-  <img src="logo.png" alt="VT Logo" width="100" />
-  <h1>ซื้อเหรียญ VT Token</h1>
-  <p>โอน USDT (BNB Chain) มาที่:<br><b>0x9213aa603Eadf792d5D1E0e665A5bfdF0D0208E9</b></p>
-  <img src="qr-usdt.png" alt="QR Code" width="180" />
-  <p>เริ่มต้น: 0.01 USDT / VT<br>โควต้า: 500,000 VT</p>
-  <a href="admin.html">เข้าสู่ระบบแอดมิน</a>
+<body>
+  <header>
+    <img src="logo.png" alt="VT Token Logo" />
+    <span>VT Token Official</span>
+  </header>
+  <div class="container">
+    <h1>ซื้อเหรียญ VT Token</h1>
+    <div class="section">
+      <p>สามารถโอน USDT (BNB Chain) เพื่อซื้อเหรียญ VT ได้ที่:</p>
+      <strong>Wallet: 0x9213aa603Eadf792d5D1E0e665A5bfdF0D0208E9</strong>
+    </div>
+    <div class="qrcode">
+      <p>สแกน QR เพื่อโอน:</p>
+      <img src="qr-usdt.png" alt="QR Code for USDT" />
+    </div>
+    <div class="section">
+      <p>ราคาเริ่มต้น: <strong>0.01 USDT / 1 VT</strong></p>
+      <p>โควต้ารอบนี้: <strong>500,000 VT</strong></p>
+    </div>
+    <div class="section">
+      <h2>VT Ecosystem Roadmap</h2>
+      <ul>
+        <li>Q2 2025: เปิดขายรอบแรก, ตั้งราคาถูก, กำหนดโควต้า</li>
+        <li>Q3 2025: เปิด Swap, ระบบ Shopping, Referral</li>
+        <li>Q4 2025: จ่ายบิล, จองตั๋ว, ใช้งานกระเป๋า VT</li>
+        <li>Q1 2026: บัตร VT Crypto, เข้า Exchange</li>
+      </ul>
+    </div>
+    <div class="contact">
+      <a href="https://lin.ee/RF040cJ" target="_blank">ติดต่อผ่าน LINE</a>
+    </div>
+  </div>
 </body>
 </html>
