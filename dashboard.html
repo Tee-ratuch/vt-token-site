@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard</title>
+</head>
+<body style="font-family:sans-serif; padding:20px; background:#fff;">
+  <h2>รายการคำสั่งซื้อเหรียญ</h2>
+  <table border="1" cellpadding="10" style="border-collapse: collapse; width:100%;">
+    <tr><th>Wallet</th><th>จำนวน USDT</th><th>สถานะ</th><th>การจัดการ</th></tr>
+    <tr><td>0xA1...BdC9</td><td>100</td><td style="color:red;">ยังไม่ยืนยัน</td>
+        <td><button onclick="confirm(this)">ยืนยัน</button></td></tr>
+    <tr><td>0xB5...E71D</td><td>200</td><td style="color:green;">ยืนยันแล้ว</td><td></td></tr>
+  </table>
+  <script>
+    function confirm(btn) {
+      btn.parentElement.previousElementSibling.innerText = 'ยืนยันแล้ว';
+      btn.parentElement.previousElementSibling.style.color = 'green';
+      btn.remove();
+    }
+  </script>
+</body>
+</html>
