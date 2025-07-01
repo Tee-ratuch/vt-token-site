@@ -25,6 +25,13 @@
     <h1>VT Token - VoucherWallet</h1>
   </header>
   <div class="container">
+    <label for="vtAmount">enter amount of VT you want to Swap:</label>
+<input type="number" id="vtAmount" placeholder="e.g.100" oninput="calculateUSDT()" style="margin-bottom: 10px; display: block; width: 100%; padding: 10px; font-size: 16px;">
+
+<label for="usdtAmount">Estimaded amount USDT send in (BEP-20):</label>
+<input type="text" id="usdtAmount" readonly style="background-color: #f0f0f0; border: 1px solid #ccc; padding: 10px; font-size: 16px; width: 100%;">
+
+    
     <h2>Swap VT Token (Binance Smart Chain)</h2>
     <p><strong>Token Contract Address:</strong><br/>0x27540366Af622E991cFd82d85E4BA10be34183F2</p>
     <div class="input-group">
@@ -57,9 +64,15 @@
   <div class="footer">© 2025 VT Token Ecosystem</div>
 
   <script>
-    const vtInput = document.getElementById('vtAmount');
-    const usdtResult = document.getElementById('usdtResult');
-    const walletBox = document.getElementById('walletBox');
+  // สมมุติราคาเหรียญ VT ปัจจุบัน
+  const vtPrice = 0.01;
+
+  function calculateUSDT() {
+    const vtAmount = document.getElementById("vtAmount").value;
+    const usdt = (vtAmount * vtPrice).toFixed(2);
+    document.getElementById("usdtAmount").value = usdt > 0 ? usdt + " USDT" : "";
+  }
+</script>
 
     let vtPrice = 0.01;
     vtInput.addEventListener('input', () => {
