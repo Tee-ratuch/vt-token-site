@@ -28,13 +28,11 @@
     <h2>Swap VT Token (Binance Smart Chain)</h2>
     <p><strong>Token Contract Address:</strong><br/>0x27540366Af622E991cFd82d85E4BA10be34183F2</p>
     <div class="input-group">
-     <!-- VT Amount Input -->
      <label for="vtAmount">Enter the amount of VT you want to Swap:</label>
      <input type="number" id="vtAmount" placeholder="e.g. 1000" 
        oninput="calculateUSDT()" 
        style="margin-bottom: 12px; display: block; width: 100%; padding: 10px; font-size: 16px; border: 1px solid #ccc; border-radius: 6px;">
 
-      <!-- USDT Result Display (Read-only Input Box) -->
       <label for="usdtAmount">Amount to transfer in USDT (BEP-20):</label>
       <input type="text" id="usdtAmount" readonly 
        style="background-color: #f0f0f0; border: 1px solid #ccc; padding: 10px; font-size: 16px; width: 100%; border-radius: 6px;">
@@ -60,6 +58,7 @@
     </div>
   </div>
   <div class="footer">© 2025 VT Token Ecosystem</div>
+  
 
   <script>
   // Current VT price (admin-defined, you can replace this later with dynamic value)
