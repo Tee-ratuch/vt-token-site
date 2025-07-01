@@ -66,15 +66,9 @@
     const usdtResult = document.getElementById('usdtResult');
     const walletBox = document.getElementById('walletBox');
 
-    let vtPrice = 0.01;
-    vtInput.addEventListener('input', () => {
-      const val = parseFloat(vtInput.value) || 0;
-      usdtResult.textContent = (val * vtPrice).toFixed(2);
-    });
-
  
   // Current VT price (admin-defined, you can replace this later with dynamic value)
-  const vtPrice = 0.01;
+  const vtPrice = 0.005;
 
   function calculateUSDT() {
     const vtAmount = parseFloat(document.getElementById("vtAmount").value) || 0;
