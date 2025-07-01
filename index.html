@@ -72,6 +72,16 @@
       usdtResult.textContent = (val * vtPrice).toFixed(2);
     });
 
+ 
+  // Current VT price (admin-defined, you can replace this later with dynamic value)
+  const vtPrice = 0.01;
+
+  function calculateUSDT() {
+    const vtAmount = parseFloat(document.getElementById("vtAmount").value) || 0;
+    const usdtAmount = (vtAmount * vtPrice).toFixed(2);
+    document.getElementById("usdtAmount").value = usdtAmount > 0 ? usdtAmount + " USDT" : "";
+    
+
     function showWallet() {
       walletBox.style.display = 'block';
     }
@@ -83,14 +93,7 @@
     }
   </script>
 </body>
-  <script>
-  // Current VT price (admin-defined, you can replace this later with dynamic value)
-  const vtPrice = 0.01;
-
-  function calculateUSDT() {
-    const vtAmount = parseFloat(document.getElementById("vtAmount").value) || 0;
-    const usdtAmount = (vtAmount * vtPrice).toFixed(2);
-    document.getElementById("usdtAmount").value = usdtAmount > 0 ? usdtAmount + " USDT" : "";
+ 
   }
   </script>
 </html>
