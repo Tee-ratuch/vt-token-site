@@ -61,14 +61,15 @@
   
 
   <script>
-  // Current VT price (admin-defined, you can replace this later with dynamic value)
+  // สมมุติราคาเหรียญ VT ปัจจุบัน
   const vtPrice = 0.005;
 
   function calculateUSDT() {
-    const vtAmount = parseFloat(document.getElementById("vtAmount").value) || 0;
-    const usdtAmount = (vtAmount * vtPrice).toFixed(2);
-    document.getElementById("usdtAmount").value = usdtAmount > 0 ? usdtAmount + " USDT" : "";
-    
+    const vtAmount = document.getElementById("vtAmount").value;
+    const usdt = (vtAmount * vtPrice).toFixed(2);
+    document.getElementById("usdtAmount").value = usdt > 0 ? usdt + " USDT" : "";
+  }
+
 
     function showWallet() {
       walletBox.style.display = 'block';
